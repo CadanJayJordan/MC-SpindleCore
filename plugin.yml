@@ -1,0 +1,126 @@
+name: SpindleCore
+version: 0.76 BETA
+main: com.sharp_brakes_things.spindlecore.CoreMain
+load: STARTUP
+author: sharp_brakes_things
+description: SpindleMC Core
+api-version: 1.15
+depend: [Essentials, EssentialsSpawn, LiteBans, SuperVanish, ProtocolLib]
+
+commands:
+    kick:
+        aliases: []
+        description: 
+    unban:
+        aliases: []
+        description: 
+    ban:
+        aliases: [tempban]
+        description: 
+    cs:
+        aliases: [cspy, commandspy, commands, cs, scs]
+        description: 
+    ss:
+        aliases: [mspy, messagespy, messages, ms, sms, socialspy, ms]
+        description: 
+    options:
+        aliases: [option, setting, settings, player, menu]
+        description: 
+    staff:
+        aliases: []
+        description: 
+permissions:
+    spindlemc.*:
+        description:
+        default: false
+        children:
+            spindlemc.options: true
+            spindlemc.staff.admin: true
+            spindlemc.staff.mod: true
+            spindlemc.staff: true
+            spindlemc.cspy.exempt: true
+            spindlemc.cspy: true
+            spindlemc.sspy.exempt: true
+            spindlemc.sspy: true
+            spindlemc.bc.exempt: true
+            spindlemc.staff.ban.manual: true
+            spindlemc.staff.ipban: true
+            spindlemc.staff.ipban.manual: true
+            litebans.ban: true
+            litebans.unban: true
+            litebans.unban.queue: true
+            litebans.notify.silent: true
+            litebans.kick: true
+    spindlemc.admin.*:
+        description:
+        default: op
+        children:
+            spindlemc.options: true
+            spindlemc.staff.admin: true
+            spindlemc.staff.mod.*: true
+            spindlemc.staff.mod: true
+            spindlemc.staff: true
+            spindlemc.cspy: true
+            spindlemc.sspy: true
+            spindlemc.staff.ipban: true
+            spindlemc.staff.spamcheck: true
+            litebans.ban: true
+            litebans.unban: true
+            litebans.unban.queue: true
+            litebans.notify.silent: true
+            litebans.kick: true
+    spindlemc.mod.*:
+        description:
+        default: op
+        children:
+            spindlemc.staff.mod: true
+            spindlemc.staff: true
+            spindlemc.cspy: true
+            spindlemc.sspy: true
+            spindlemc.staff.spamcheck: true
+            litebans.ban: true
+            litebans.unban: true
+            litebans.unban.queue: true
+            litebans.notify.silent: true
+            litebans.kick: true
+    spindlemc.player.*:
+        description:
+        default: op
+        children:
+            spindlemc.player.options: true
+    spindlemc.plugin.reload:
+        description:
+        default: false
+    spindlemc.bc.exempt:
+        description:
+        default: false
+    spindlemc.cspy.exempt:
+        description:
+        default: false
+    spindlemc.sspy.exempt:
+        description:
+        default: false
+    spindlemc.staff.ban.manual:
+        description:
+        default: false
+    spindlemc.staff.admin:
+        description:
+        default: op
+    spindlemc.staff.mod:
+        description:
+        default: op
+    spindlemc.staff.spamcheck:
+        description:
+        default: op
+    spindlemc.staff:
+        description:
+        default: op
+    spindlemc.cspy:
+        description:
+        default: op
+    spindlemc.sspy:
+        description:
+        default: op
+    spindlemc.player.options:
+        description:
+        default: op

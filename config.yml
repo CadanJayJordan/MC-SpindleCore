@@ -1,0 +1,8 @@
+#This message that comes up before every message. (Put a space at the end if you want a space between the message and prefix).
+Prefix: '&3[&bSpindle&3] '
+
+#This message that comes up when the player doesn't have permission to do something
+NoPermissions: '&4You don''t have the permission to use that command'
+
+#This message that comes up when the player doesn't have permission to do something
+PlayerOnly: '&4You can only use this command as a player'
